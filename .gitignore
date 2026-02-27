@@ -1,0 +1,9 @@
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+*.pkl
+*.log
