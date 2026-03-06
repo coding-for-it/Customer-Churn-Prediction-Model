@@ -14,5 +14,6 @@ def connect_db():
             database=os.getenv("DB_NAME", "churn_db")
         )
         return connection
+        
     except mysql.connector.Error as err:
         raise ConnectionError(f"MySQL connection failed: {err}")
