@@ -11,7 +11,7 @@ try:
     logistic_model = joblib.load(os.path.join(MODEL_DIR, "logistic_model.pkl"))
     columns_used = joblib.load(os.path.join(MODEL_DIR, "columns_used.pkl"))
 except Exception as e:
-    raise RuntimeError("❌ Model files could not be loaded. Check file paths.") from e
+    raise RuntimeError("Model files could not be loaded. Check file paths.") from e
 
 
 def predict_churn(input_data, model_name="random_forest"):
@@ -35,4 +35,4 @@ def predict_churn(input_data, model_name="random_forest"):
         prediction = model.predict(df)
         return int(prediction[0])
     except Exception as e:
-        raise ValueError("❌ Prediction failed. Please check input format.") from e
+        raise ValueError("Prediction failed. Please check input format.") from e
